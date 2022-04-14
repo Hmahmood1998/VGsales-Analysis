@@ -3,6 +3,8 @@ import pandas as pd
 from visualization import *
 import plotly.graph_objs as go
 
+st.title("Video Games Sale Analysis")
+
 def readData():
     Video_Games = pd.read_csv('vgsales.csv.zip')
     Video_Games.rename(columns={'Platform':'Plateform'}, inplace=True)
@@ -26,10 +28,10 @@ def introduction():
     
     Name : HAMID MAHAMOOD
     \nQualification : Bachelor of Technology (B.Tech)
-    \nStream : Mechnical 
+    \nStream : Mechanical 
     \nUniversity : JNTUH
     \nLocation : Hyderabad, INDIA
-    \nThis Project is to perform the analysis on the Video Games Sales dataset. Here we use various libraries of Python for visualization of Data. The Dataset which is Used in Project is from Data World (👈 Click to Download)
+    \nThis Project is to perform the analysis on the Video Games Sales dataset. Here we use various libraries of Python for visualization of Data. The Dataset which is Used in Project is from https://www.kaggle.com/datasets/gregorut/videogamesales (👈 Click to Download)
         
         - The Libraries I used in Project are:
             Matplotlib Explore here
@@ -46,15 +48,15 @@ def introduction():
             References and Future Work
     """)
 
-    c1, c2 = st.columns(2)
+#     c1, c2 = st.columns(2)
 
-    c1.header("Column 1 Content")
-    c2.header("Column 2 Content")
+#     c1.header("Column 1 Content")
+#     c2.header("Column 2 Content")
 
 
 def execute():
     
-    st.image('image.png')
+    st.image('img.jpg')
     st.markdown("""# Let's Begin Our Analysis""")
     st.dataframe(df)
 
